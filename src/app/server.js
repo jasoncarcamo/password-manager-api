@@ -10,5 +10,5 @@ const db = knex({
 app.set("db", db);
 
 app.listen(process.env.PORT, ()=>{
-    console.log("Server listening on pot 8000")
+    console.log("Server listening on port 8000")
 });
