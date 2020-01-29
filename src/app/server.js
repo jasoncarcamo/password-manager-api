@@ -7,6 +7,8 @@ const db = knex({
     connection: process.env.DATABASE_URL
 });
 
+
+//Pass the db through the middleware pipleine
 app.set("db", db);
 
 app.listen(process.env.PORT, ()=>{

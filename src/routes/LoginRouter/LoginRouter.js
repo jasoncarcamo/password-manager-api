@@ -27,7 +27,7 @@ LoginRouter
         LoginService.getUser( req.app.get("db"), user.email)
             .then( dbUser =>{
                 if(!dbUser){
-                    return res.status(400).json({ error: `No user in found`});
+                    return res.status(400).json({ error: `No user found`});
                 };
 
                 LoginService.comparePassword( user.password, dbUser.password)

@@ -8,11 +8,15 @@ RegisterRouter
     .all(express.urlencoded({ extended: true}))
     .post(( req, res)=>{
         const {
+            first_name,
+            last_name,
             email,
             password
         } = req.body;
 
         const newUser = {
+            first_name,
+            last_name,
             email,
             password
         };
@@ -27,7 +31,7 @@ RegisterRouter
             .then( dbUser => {
 
                 if(dbUser){
-                    return res.status(400).json({ error: `You seem to have account already`});
+                    return res.status(400).json({ error: `You seem to have account already. Log in`});
                 };
 
                 RegisterService.hashPassword( newUser.password)
