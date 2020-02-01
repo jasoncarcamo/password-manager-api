@@ -9,7 +9,7 @@ const LoginService = {
         return bcrypt.compare(password, hashedPassword );
     },
     createJwt(subject, payload){
-        return jwt.sign( payload, process.env.JWT_SECRET, {
+        return jwt.sign( payload, JWT_SECRET, {
             subject,
             algorithm: "HS256"
         });
