@@ -10,6 +10,9 @@
     "test-migrate": "postgrator --config ./test-migration.js",
     "prod-migrate": "postgrator --config ./prod-migration.js"
   },
+  "engines": {
+    "node": "10.16.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
