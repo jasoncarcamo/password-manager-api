@@ -5,7 +5,6 @@ const RegisterService = require("./RegisterService");
 RegisterRouter
     .route("/register")
     .all(express.json())
-    .all(express.urlencoded({ extended: true}))
     .post(( req, res)=>{
         const {
             first_name,

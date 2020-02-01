@@ -5,7 +5,6 @@ const {requireAuth} = require("../../middleware/jwtAuth");
 UsersRouter
     .route("/user")
     .all(express.json())
-    .all(express.urlencoded({ extended: true}))
     .all(requireAuth)
     .get(( req, res)=>{
         //We have our user from our middleware, requireAuth

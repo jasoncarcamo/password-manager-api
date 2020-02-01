@@ -5,7 +5,6 @@ const LoginService = require("./LoginService");
 LoginRouter
     .route("/login")
     .all(express.json())
-    .all( express.urlencoded({ extended: true}))
     .post(( req, res)=>{
 
         const {

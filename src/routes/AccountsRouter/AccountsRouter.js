@@ -6,7 +6,6 @@ const AccountService = require("./AccountsService");
 AccountsRouter
     .route("/accounts")
     .all(express.json())
-    .all(express.urlencoded({ extended: true}))
     .all(requireAuth)
     .get((req, res)=>{
         AccountService.getUserAccounts( req.app.get("db"), req.user.id)
