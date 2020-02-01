@@ -8,7 +8,7 @@
     "start": "node ./src/app/server.js",
     "dev": "nodemon ./src/app/server.js",
     "test-migrate": "postgrator --config ./test-migration.js",
-    "prod-migrate": "postragtor --config ./prod-migration.js"
+    "prod-migrate": "postgrator --config ./prod-migration.js"
   },
   "keywords": [],
   "author": "",

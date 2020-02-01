@@ -19,4 +19,8 @@ app.use("/api", LoginRouter);
 app.use("/api", UsersRouter);
 app.use("/api", AccountsRouter);
 
+app.use("/", (req, res)=>{
+    return res.send("Working")
+})
+
 module.exports = app;
